@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
+
 import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
-import { DatasetProvider } from "@/context/DatasetContext";
+
 import { ThemeProvider } from "@/components/theme-provider";
-import { Header } from "@/components/layout/Header";
-import { Toaster } from "sonner";
-import { AppToaster } from "@/components/AppToaster";
+import { DatasetProvider } from "@/context/DatasetContext";
 import { ConfigProvider } from "@/context/ConfigContext";
+import { AppToaster } from "@/components/AppToaster";
+import { Header } from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import "./globals.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -44,7 +45,7 @@ export default function RootLayout({
             <DatasetProvider>
               <Header />
               <AppToaster/>
-              <main className="bg-green-animated">{children}</main>
+              <main className="bg-green-animated h-full min-h-screen">{children}</main>
               <Footer/>
             </DatasetProvider>
           </ConfigProvider>

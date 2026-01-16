@@ -21,7 +21,7 @@ export default function ConfigPage() {
 
 
   return (
-     <section className="text-white w-screen h-screen flex flex-col justify-center items-center text-center">
+     <section className="w-screen flex flex-col justify-center items-center text-center py-25">
         
         <TypographyH2>Seleziona i tuoi dati</TypographyH2>
         <TypographyH4>Ora che abbiamo caricato i dati, scegli i campi da visualizzare.</TypographyH4>
