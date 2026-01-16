@@ -6,7 +6,7 @@ import type { Dataset, DatasetRow, DatasetValue } from "@/types/dataset"
 
 // convert string value into cell to a parsed value accordingly to valid DatasetValue
 function inferValue(value: string): DatasetValue {
-  if (value === "") return null
+  if (value === "") return "Vuoto"
   if (!isNaN(Number(value))) return Number(value)
   return value
 }

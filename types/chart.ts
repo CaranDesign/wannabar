@@ -19,6 +19,6 @@ export type NormalizedSeries = {
 }
 
 export type NormalizedChartData = {
-  labels: (string | number | Date )[]
+  labels: (string | number)[]
   series: NormalizedSeries[]
 }

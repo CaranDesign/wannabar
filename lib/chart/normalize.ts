@@ -16,6 +16,7 @@ export function normalizeDataset(
   // Le altre sono serie numeriche
   const yColumns = selectedColumns.slice(1);
 
+
   return {
     labels: dataset.rows.map(row => row[xColumn]),
     series: yColumns.map(col => ({

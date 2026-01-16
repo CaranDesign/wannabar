@@ -30,6 +30,8 @@ export function DatasetProvider({ children }: Props) {
     setDatasetState({ ...dataset, rows: newRows })
   }
 
+  console.log(dataset)
+
   return (
     <DatasetContext.Provider 
       value={{
