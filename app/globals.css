@@ -137,8 +137,6 @@
   }
   body {
     @apply bg-background text-foreground;
-    background-image: url("/wb-background.jpg");
-    background-size: cover;
   }
 
   @keyframes gradient-shift {
@@ -194,7 +192,7 @@
   }
   .wb-bg-glass {
       backdrop-filter: blur(5px);
-      background: #00000071;
+      background: #00000030;
   }
   .wb-data-selector{
    -webkit-mask-image: linear-gradient(black, transparent);
@@ -203,15 +201,15 @@
   .bg-green-animated {
     background-image: linear-gradient(
       90deg,
-      rgb(30, 50, 34) 0%,
-      rgb(38, 60, 42) 12%,
-      rgb(46, 73, 50) 25%,
-      rgb(55, 77, 57) 37%, 
-      rgb(65, 85, 63) 50%, 
-      rgb(55, 77, 57) 63%, 
-      rgb(46, 73, 50) 75%,
-      rgb(38, 60, 42) 88%,
-      rgb(30, 50, 34) 100%
+      rgb(30, 38, 50) 0%,
+      rgb(38, 53, 60) 12%,
+      rgb(46, 68, 73) 25%,
+      rgb(55, 66, 77) 37%, 
+      rgb(0, 61, 76) 50%, 
+      rgb(55, 65, 77) 63%, 
+      rgb(46, 60, 73) 75%,
+      rgb(38, 51, 60) 88%,
+      rgb(30, 30, 50) 100%
     );
 
     background-size: 300% 300%;

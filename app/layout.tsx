@@ -44,7 +44,7 @@ export default function RootLayout({
             <DatasetProvider>
               <Header />
               <AppToaster/>
-              <main>{children}</main>
+              <main className="bg-green-animated">{children}</main>
               <Footer/>
             </DatasetProvider>
           </ConfigProvider>
