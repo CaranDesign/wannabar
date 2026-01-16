@@ -16,7 +16,7 @@ export default function ViewerPage() {
   if (!dataset) router.push("/");
   
   return (
-    <section className="text-white w-screen min-h-screen flex flex-col items-center p-5">
+    <section className="text-white w-screen min-h-screen flex flex-col items-center p-5 py-30">
       
 
      <div className="max-w-7xl w-full flex justify-end items-end">

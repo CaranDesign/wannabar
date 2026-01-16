@@ -65,7 +65,7 @@ export default function DataSelector() {
       {dataset && 
         <div className='flex items-center justify-center flex-col'>
           <TypographyP>Ecco una anteprima dei tuoi dati, scegli i dati da visualizzare.</TypographyP>
-          <div className='wb-data-selector border border-yellow-600/50 w-90 sm:w-lg md:w-3xl max-h-80 fade-in-up wb-bg-glass rounded-lg mt-5'>
+          <div className='wb-data-selector border border-yellow-600/50 w-90 sm:w-lg md:w-3xl fade-in-up wb-bg-glass rounded-lg mt-5'>
               <Table>
                 <TableHeader>
                     <TableRow>
