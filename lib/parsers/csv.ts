@@ -8,7 +8,6 @@ import type { Dataset, DatasetRow, DatasetValue } from "@/types/dataset"
 function inferValue(value: string): DatasetValue {
   if (value === "") return null
   if (!isNaN(Number(value))) return Number(value)
-  if (!isNaN(Date.parse(value))) return new Date(value)
   return value
 }
 
@@ -20,10 +19,16 @@ function inferColumns(rows: DatasetRow[]) {
    // find the first not nullable value of the rows based on key 
    // infer the type of the column based on that value
   return Object.keys(rows[0]).map((key) => {
-    const firstNonNull = rows.find((r) => r[key] != null)?.[key]
+    
+      const firstValidValue = rows.find((r) => {
+        const value = r[key];
+        if (value === null || value === undefined) return false;
+        if (typeof value === "string" && value.trim() === "") return false;
+        return true;
+      })?.[key];
+    
     let type: "number" | "string" | "date" = "string"
-    if (typeof firstNonNull === "number") type = "number"
-    else if (firstNonNull instanceof Date) type = "date"
+    if (typeof firstValidValue === "number") type = "number"
     return { name: key, type }
   })
 }

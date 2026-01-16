@@ -8,7 +8,7 @@ export type DatasetColumn = {
   type: FieldType
 }
 
-export type DatasetValue = string | number 
+export type DatasetValue = string | number | null
 
 export type DatasetRow = Record<string, DatasetValue>
 
